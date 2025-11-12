@@ -1,0 +1,19 @@
+.page_container {
+    &.view_index {
+        & > .header {
+            height: 50px;
+        }
+
+        & > .left,
+        & > .right {
+            width: 50%;
+            display: inline-block;
+        }
+
+        & > .left {
+        }
+
+        & > .right {
+        }
+    }
+}
