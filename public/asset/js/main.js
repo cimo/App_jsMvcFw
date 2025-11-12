@@ -879,6 +879,70 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
 
 
 class Index {
+  constructor() {
+    // Variable
+    __publicField(this, "variableObject");
+    __publicField(this, "methodObject");
+    // Method
+    __publicField(this, "onClickLink", (pagePath) => {
+      (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.navigateTo)(pagePath);
+    });
+    __publicField(this, "elementHookObject", {});
+    this.variableObject = {};
+    this.methodObject = {};
+  }
+  variable() {
+    this.variableObject = (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.variableBind)(
+      {
+        isLoading: true
+      },
+      this.constructor.name
+    );
+    this.methodObject = {
+      onClickLink: this.onClickLink
+    };
+  }
+  variableEffect(watch) {
+    watch([]);
+  }
+  view() {
+    return (0,_view_Index__WEBPACK_IMPORTED_MODULE_1__["default"])(this.variableObject, this.methodObject);
+  }
+  event() {
+  }
+  subControllerList() {
+    const resultList = [];
+    return resultList;
+  }
+  rendered() {
+  }
+  destroy() {
+  }
+}
+
+
+/***/ }),
+
+/***/ "./src/controller/Page1.ts":
+/*!*********************************!*\
+  !*** ./src/controller/Page1.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Page1)
+/* harmony export */ });
+/* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cimo/jsmvcfw/dist/src/Main */ "./node_modules/@cimo/jsmvcfw/dist/src/Main.js");
+/* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _view_Page1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../view/Page1 */ "./src/view/Page1.tsx");
+
+var __defProp = Object.defineProperty;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+
+
+class Page1 {
   // Method
   constructor() {
     // Variable
@@ -901,7 +965,7 @@ class Index {
     watch([]);
   }
   view() {
-    return (0,_view_Index__WEBPACK_IMPORTED_MODULE_1__["default"])(this.variableObject, this.methodObject);
+    return (0,_view_Page1__WEBPACK_IMPORTED_MODULE_1__["default"])(this.variableObject, this.methodObject);
   }
   event() {
   }
@@ -933,9 +997,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const viewIndex = (variableObject, methodObject) => {
-  return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { "jsmvcfw-controllerName": "Index" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "page_container view_index" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "header" }, "Header"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "left" }, "Left"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "right" }, "Right")));
+  return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { "jsmvcfw-controllerName": "Index" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "page_container view_index" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "header" }, "Header"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "left" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("ul", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)(
+    "li",
+    {
+      onclick: () => {
+        methodObject.onClickLink("/page_1");
+      }
+    },
+    /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("p", { class: "link" }, "Go to page 1")
+  ), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Section 1"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Section 2"))), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "right" }, "Right")));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (viewIndex);
+
+
+/***/ }),
+
+/***/ "./src/view/Page1.tsx":
+/*!****************************!*\
+  !*** ./src/view/Page1.tsx ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cimo/jsmvcfw/dist/src/Main */ "./node_modules/@cimo/jsmvcfw/dist/src/Main.js");
+/* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const viewPage1 = (variableObject, methodObject) => {
+  return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { "jsmvcfw-controllerName": "Page1" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "page_container view_page1" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "header" }, "Header"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "left" }, "Left"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "right" }, "Right")));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (viewPage1);
 
 
 /***/ })
@@ -1018,6 +1112,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cimo/jsmvcfw/dist/src/Main */ "./node_modules/@cimo/jsmvcfw/dist/src/Main.js");
 /* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _controller_Index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controller/Index */ "./src/controller/Index.ts");
+/* harmony import */ var _controller_Page1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controller/Page1 */ "./src/controller/Page1.ts");
+
 
 
 
@@ -1027,6 +1123,11 @@ __webpack_require__.r(__webpack_exports__);
     title: "Index",
     path: "/",
     controller: () => new _controller_Index__WEBPACK_IMPORTED_MODULE_1__["default"]()
+  },
+  {
+    title: "Page 1",
+    path: "/page_1",
+    controller: () => new _controller_Page1__WEBPACK_IMPORTED_MODULE_2__["default"]()
   }
 ]);
 

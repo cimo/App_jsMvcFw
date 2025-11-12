@@ -4,32 +4,27 @@ import {
     IvariableEffect,
     IvirtualNode,
     variableBind,
-    navigateTo,
     elementObserver,
     elementObserverOff,
     elementObserverOn
 } from "@cimo/jsmvcfw/dist/src/Main";
 
 // Source
-import * as modelIndex from "../model/Index";
-import viewIndex from "../view/Index";
+import * as modelPage1 from "../model/Page1";
+import viewPage1 from "../view/Page1";
 
-export default class Index implements Icontroller {
+export default class Page1 implements Icontroller {
     // Variable
-    private variableObject: modelIndex.Ivariable;
-    private methodObject: modelIndex.Imethod;
+    private variableObject: modelPage1.Ivariable;
+    private methodObject: modelPage1.Imethod;
 
     // Method
-    private onClickLink = (pagePath: string): void => {
-        navigateTo(pagePath);
-    };
-
     constructor() {
-        this.variableObject = {} as modelIndex.Ivariable;
-        this.methodObject = {} as modelIndex.Imethod;
+        this.variableObject = {} as modelPage1.Ivariable;
+        this.methodObject = {} as modelPage1.Imethod;
     }
 
-    elementHookObject = {} as modelIndex.IelementHook;
+    elementHookObject = {} as modelPage1.IelementHook;
 
     variable(): void {
         this.variableObject = variableBind(
@@ -39,9 +34,7 @@ export default class Index implements Icontroller {
             this.constructor.name
         );
 
-        this.methodObject = {
-            onClickLink: this.onClickLink
-        };
+        this.methodObject = {};
     }
 
     variableEffect(watch: IvariableEffect): void {
@@ -49,7 +42,7 @@ export default class Index implements Icontroller {
     }
 
     view(): IvirtualNode {
-        return viewIndex(this.variableObject, this.methodObject);
+        return viewPage1(this.variableObject, this.methodObject);
     }
 
     event(): void {}

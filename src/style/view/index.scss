@@ -6,14 +6,26 @@
 
         & > .left,
         & > .right {
-            width: 50%;
             display: inline-block;
         }
 
         & > .left {
+            width: 30%;
+
+            ul {
+                li {
+                    list-style: disc;
+                    margin-left: 25px;
+
+                    .link {
+                        cursor: pointer;
+                    }
+                }
+            }
         }
 
         & > .right {
+            width: 70%;
         }
     }
 }

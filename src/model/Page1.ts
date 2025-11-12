@@ -4,8 +4,6 @@ export interface Ivariable {
     isLoading: IvariableBind<boolean>;
 }
 
-export interface Imethod {
-    onClickLink: (pagePath: string) => void;
-}
+export interface Imethod {}
 
 export interface IelementHook extends Record<string, Element | Element[]> {}

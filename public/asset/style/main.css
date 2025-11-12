@@ -90,6 +90,26 @@ meter {
   height: 50px;
 }
 .page_container.view_index > .left, .page_container.view_index > .right {
+  display: inline-block;
+}
+.page_container.view_index > .left {
+  width: 30%;
+}
+.page_container.view_index > .left ul li {
+  list-style: disc;
+  margin-left: 25px;
+}
+.page_container.view_index > .left ul li .link {
+  cursor: pointer;
+}
+.page_container.view_index > .right {
+  width: 70%;
+}
+
+.page_container.view_page1 > .header {
+  height: 50px;
+}
+.page_container.view_page1 > .left, .page_container.view_page1 > .right {
   width: 50%;
   display: inline-block;
 }

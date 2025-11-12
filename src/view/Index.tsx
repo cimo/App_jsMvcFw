@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { jsxFactory, IvirtualNode } from "@cimo/jsmvcfw/dist/src/Main";
 
 // Source
@@ -9,7 +8,19 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
         <div jsmvcfw-controllerName="Index">
             <div class="page_container view_index">
                 <div class="header">Header</div>
-                <div class="left">Left</div>
+                <div class="left">
+                    <ul>
+                        <li
+                            onclick={() => {
+                                methodObject.onClickLink("/page_1");
+                            }}
+                        >
+                            <p class="link">Go to page 1</p>
+                        </li>
+                        <li>Section 1</li>
+                        <li>Section 2</li>
+                    </ul>
+                </div>
                 <div class="right">Right</div>
             </div>
         </div>

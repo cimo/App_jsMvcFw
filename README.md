@@ -6,7 +6,7 @@ App example for npm_jsmvcfw package.
 
 - a
 - b
-- c 
+- c
 
 ## Installation
 
