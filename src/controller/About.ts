@@ -10,21 +10,21 @@ import {
 } from "@cimo/jsmvcfw/dist/src/Main";
 
 // Source
-import * as modelPage1 from "../model/Page1";
-import viewPage1 from "../view/Page1";
+import * as modelAbout from "../model/About";
+import viewAbout from "../view/About";
 
-export default class Page1 implements Icontroller {
+export default class About implements Icontroller {
     // Variable
-    private variableObject: modelPage1.Ivariable;
-    private methodObject: modelPage1.Imethod;
+    private variableObject: modelAbout.Ivariable;
+    private methodObject: modelAbout.Imethod;
 
     // Method
     constructor() {
-        this.variableObject = {} as modelPage1.Ivariable;
-        this.methodObject = {} as modelPage1.Imethod;
+        this.variableObject = {} as modelAbout.Ivariable;
+        this.methodObject = {} as modelAbout.Imethod;
     }
 
-    elementHookObject = {} as modelPage1.IelementHook;
+    elementHookObject = {} as modelAbout.IelementHook;
 
     variable(): void {
         this.variableObject = variableBind(
@@ -42,7 +42,7 @@ export default class Page1 implements Icontroller {
     }
 
     view(): IvirtualNode {
-        return viewPage1(this.variableObject, this.methodObject);
+        return viewAbout(this.variableObject, this.methodObject);
     }
 
     event(): void {}

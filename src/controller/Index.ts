@@ -20,6 +20,10 @@ export default class Index implements Icontroller {
     private methodObject: modelIndex.Imethod;
 
     // Method
+    private onClickItem = (name: string): void => {
+        this.variableObject.itemClickName.state = name;
+    };
+
     private onClickLink = (pagePath: string): void => {
         navigateTo(pagePath);
     };
@@ -34,12 +38,13 @@ export default class Index implements Icontroller {
     variable(): void {
         this.variableObject = variableBind(
             {
-                isLoading: true
+                itemClickName: ""
             },
             this.constructor.name
         );
 
         this.methodObject = {
+            onClickItem: this.onClickItem,
             onClickLink: this.onClickLink
         };
     }

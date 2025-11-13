@@ -859,6 +859,65 @@ __exportStar(__webpack_require__(/*! ./JsMvcFwStorage */ "./node_modules/@cimo/j
 
 /***/ }),
 
+/***/ "./src/controller/About.ts":
+/*!*********************************!*\
+  !*** ./src/controller/About.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ About)
+/* harmony export */ });
+/* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cimo/jsmvcfw/dist/src/Main */ "./node_modules/@cimo/jsmvcfw/dist/src/Main.js");
+/* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _view_About__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../view/About */ "./src/view/About.tsx");
+
+var __defProp = Object.defineProperty;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+
+
+class About {
+  // Method
+  constructor() {
+    // Variable
+    __publicField(this, "variableObject");
+    __publicField(this, "methodObject");
+    __publicField(this, "elementHookObject", {});
+    this.variableObject = {};
+    this.methodObject = {};
+  }
+  variable() {
+    this.variableObject = (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.variableBind)(
+      {
+        isLoading: true
+      },
+      this.constructor.name
+    );
+    this.methodObject = {};
+  }
+  variableEffect(watch) {
+    watch([]);
+  }
+  view() {
+    return (0,_view_About__WEBPACK_IMPORTED_MODULE_1__["default"])(this.variableObject, this.methodObject);
+  }
+  event() {
+  }
+  subControllerList() {
+    const resultList = [];
+    return resultList;
+  }
+  rendered() {
+  }
+  destroy() {
+  }
+}
+
+
+/***/ }),
+
 /***/ "./src/controller/Index.ts":
 /*!*********************************!*\
   !*** ./src/controller/Index.ts ***!
@@ -884,6 +943,9 @@ class Index {
     __publicField(this, "variableObject");
     __publicField(this, "methodObject");
     // Method
+    __publicField(this, "onClickItem", (name) => {
+      this.variableObject.itemClickName.state = name;
+    });
     __publicField(this, "onClickLink", (pagePath) => {
       (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.navigateTo)(pagePath);
     });
@@ -894,11 +956,12 @@ class Index {
   variable() {
     this.variableObject = (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.variableBind)(
       {
-        isLoading: true
+        itemClickName: ""
       },
       this.constructor.name
     );
     this.methodObject = {
+      onClickItem: this.onClickItem,
       onClickLink: this.onClickLink
     };
   }
@@ -923,61 +986,24 @@ class Index {
 
 /***/ }),
 
-/***/ "./src/controller/Page1.ts":
-/*!*********************************!*\
-  !*** ./src/controller/Page1.ts ***!
-  \*********************************/
+/***/ "./src/view/About.tsx":
+/*!****************************!*\
+  !*** ./src/view/About.tsx ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Page1)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cimo/jsmvcfw/dist/src/Main */ "./node_modules/@cimo/jsmvcfw/dist/src/Main.js");
 /* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _view_Page1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../view/Page1 */ "./src/view/Page1.tsx");
-
-var __defProp = Object.defineProperty;
-var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
 
 
-class Page1 {
-  // Method
-  constructor() {
-    // Variable
-    __publicField(this, "variableObject");
-    __publicField(this, "methodObject");
-    __publicField(this, "elementHookObject", {});
-    this.variableObject = {};
-    this.methodObject = {};
-  }
-  variable() {
-    this.variableObject = (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.variableBind)(
-      {
-        isLoading: true
-      },
-      this.constructor.name
-    );
-    this.methodObject = {};
-  }
-  variableEffect(watch) {
-    watch([]);
-  }
-  view() {
-    return (0,_view_Page1__WEBPACK_IMPORTED_MODULE_1__["default"])(this.variableObject, this.methodObject);
-  }
-  event() {
-  }
-  subControllerList() {
-    const resultList = [];
-    return resultList;
-  }
-  rendered() {
-  }
-  destroy() {
-  }
-}
+const viewAbout = (variableObject, methodObject) => {
+  return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { "jsmvcfw-controllerName": "About" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "page_container view_about" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "header" }, "About"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "left" }, "...")));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (viewAbout);
 
 
 /***/ }),
@@ -994,28 +1020,81 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cimo/jsmvcfw/dist/src/Main */ "./node_modules/@cimo/jsmvcfw/dist/src/Main.js");
 /* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _view_fw_Info__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../view/fw/Info */ "./src/view/fw/Info.tsx");
+/* harmony import */ var _view_fw_File__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/fw/File */ "./src/view/fw/File.tsx");
+/* harmony import */ var _view_fw_Method__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../view/fw/Method */ "./src/view/fw/Method.tsx");
+
+
+
 
 
 const viewIndex = (variableObject, methodObject) => {
-  return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { "jsmvcfw-controllerName": "Index" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "page_container view_index" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "header" }, "Header"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "left" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("ul", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)(
-    "li",
+  return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { "jsmvcfw-controllerName": "Index" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "page_container view_index" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "header" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("p", null, "JsMvcFw wiki")), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "left" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("ul", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)(
+    "p",
     {
+      class: "click",
       onclick: () => {
-        methodObject.onClickLink("/page_1");
+        methodObject.onClickItem("");
       }
     },
-    /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("p", { class: "link" }, "Go to page 1")
-  ), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Section 1"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Section 2"))), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "right" }, "Right")));
+    "Home"
+  )), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)(
+    "p",
+    {
+      class: "click",
+      onclick: () => {
+        methodObject.onClickLink("/about");
+      }
+    },
+    "About"
+  )), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", { class: "category" }, "Framework:"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)(
+    "p",
+    {
+      class: "click",
+      onclick: () => {
+        methodObject.onClickItem("fwInfo");
+      }
+    },
+    "Info"
+  )), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)(
+    "p",
+    {
+      class: "click",
+      onclick: () => {
+        methodObject.onClickItem("fwFile");
+      }
+    },
+    "File"
+  )), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)(
+    "p",
+    {
+      class: "click",
+      onclick: () => {
+        methodObject.onClickItem("fwMethod");
+      }
+    },
+    "Method"
+  )), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", { class: "category" }, "Model:"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", { class: "click" }, "Structure"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", { class: "category" }, "View:"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", { class: "click" }, "Structure"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", { class: "category" }, "Controller:"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", { class: "click" }, "Structure"))), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "right" }, (() => {
+    if (variableObject.itemClickName.state === "fwInfo") {
+      return (0,_view_fw_Info__WEBPACK_IMPORTED_MODULE_1__["default"])(variableObject);
+    } else if (variableObject.itemClickName.state === "fwFile") {
+      return (0,_view_fw_File__WEBPACK_IMPORTED_MODULE_2__["default"])(variableObject);
+    } else if (variableObject.itemClickName.state === "fwMethod") {
+      return (0,_view_fw_Method__WEBPACK_IMPORTED_MODULE_3__["default"])(variableObject);
+    } else {
+      return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("p", null, "This wiki is the reference point for understanding how to use the framework and how it is built."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("p", null, "The menu on the left contains various categories with detailed explanations."));
+    }
+  })())));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (viewIndex);
 
 
 /***/ }),
 
-/***/ "./src/view/Page1.tsx":
-/*!****************************!*\
-  !*** ./src/view/Page1.tsx ***!
-  \****************************/
+/***/ "./src/view/fw/File.tsx":
+/*!******************************!*\
+  !*** ./src/view/fw/File.tsx ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1026,10 +1105,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__);
 
 
-const viewPage1 = (variableObject, methodObject) => {
-  return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { "jsmvcfw-controllerName": "Page1" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "page_container view_page1" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "header" }, "Header"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "left" }, "Left"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "right" }, "Right")));
+const viewFwFile = (variableObject) => {
+  return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("p", null, "Fw file content"));
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (viewPage1);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (viewFwFile);
+
+
+/***/ }),
+
+/***/ "./src/view/fw/Info.tsx":
+/*!******************************!*\
+  !*** ./src/view/fw/Info.tsx ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cimo/jsmvcfw/dist/src/Main */ "./node_modules/@cimo/jsmvcfw/dist/src/Main.js");
+/* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const viewFwInfo = (variableObject) => {
+  return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", { class: "view_fw_info" }, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("h1", null, "Introduction to the Framework"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("p", null, "The framework is a platform designed to simplify the development of dynamic user interfaces and modern web applications. It provides a clear structure and integrated tools to create reusable components, manage application state, and update the UI reactively, reducing code complexity and improving maintainability."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("h1", null, "What does the framework do?"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("ul", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Component-based architecture: the interface is divided into modular components, each with its own logic, style, and behavior. This approach promotes reuse and scalability."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Reactive UI updates: when data changes, the framework automatically updates only the necessary parts of the interface, ensuring high performance."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "State management: includes mechanisms to track and synchronize data between components, avoiding inconsistencies and simplifying application logic."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Integrated routing: allows navigation between views without reloading the entire page, ideal for single-page applications (SPA)."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Interfaces with JSX: enables defining the interface structure using a declarative syntax that combines logic and markup, simplifying the creation of complex components."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Dynamic form creation: includes features to generate and manage forms with validation, events, and data binding, reducing manual coding."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Storage management: allows saving data in localStorage or sessionStorage, with encoding options to ensure security and integrity."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Cookie management: enables reading, writing, and deleting cookies, with support for value encoding and options for expiration and security.")), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("h1", null, "Why use it?"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("ul", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "In just 54 KB (uncompressed) and 10 KB (compressed), you get a complete and professional system."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Simplifies the development of complex interfaces."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Reduces repetitive code thanks to reusable components."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Improves project maintainability and readability."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Supports scalability, from small UIs to large applications."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "No external dependencies and a focus on security.")), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("h1", null, "Key Principles"), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("ul", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Modularity: each part of the app is independent and reusable."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Reactivity: the UI responds to data changes in real time."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Reduces repetitive code thanks to reusable components."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Performance: optimized updates to avoid resource waste."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Extensibility: easy integration with external libraries and tools."), /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("li", null, "Secure and easy to use.")));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (viewFwInfo);
+
+
+/***/ }),
+
+/***/ "./src/view/fw/Method.tsx":
+/*!********************************!*\
+  !*** ./src/view/fw/Method.tsx ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cimo/jsmvcfw/dist/src/Main */ "./node_modules/@cimo/jsmvcfw/dist/src/Main.js");
+/* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const viewFwMethod = (variableObject) => {
+  return /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("div", null, /* @__PURE__ */ (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.jsxFactory)("p", null, "Fw method content"));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (viewFwMethod);
 
 
 /***/ })
@@ -1112,7 +1235,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cimo/jsmvcfw/dist/src/Main */ "./node_modules/@cimo/jsmvcfw/dist/src/Main.js");
 /* harmony import */ var _cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _controller_Index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controller/Index */ "./src/controller/Index.ts");
-/* harmony import */ var _controller_Page1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controller/Page1 */ "./src/controller/Page1.ts");
+/* harmony import */ var _controller_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controller/About */ "./src/controller/About.ts");
 
 
 
@@ -1125,9 +1248,9 @@ __webpack_require__.r(__webpack_exports__);
     controller: () => new _controller_Index__WEBPACK_IMPORTED_MODULE_1__["default"]()
   },
   {
-    title: "Page 1",
-    path: "/page_1",
-    controller: () => new _controller_Page1__WEBPACK_IMPORTED_MODULE_2__["default"]()
+    title: "About",
+    path: "/about",
+    controller: () => new _controller_About__WEBPACK_IMPORTED_MODULE_2__["default"]()
   }
 ]);
 

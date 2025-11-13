@@ -1,10 +1,11 @@
 import { IvariableBind } from "@cimo/jsmvcfw/dist/src/Main";
 
 export interface Ivariable {
-    isLoading: IvariableBind<boolean>;
+    itemClickName: IvariableBind<string>;
 }
 
 export interface Imethod {
+    onClickItem: (name: string) => void;
     onClickLink: (pagePath: string) => void;
 }
 

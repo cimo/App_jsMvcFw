@@ -2,6 +2,12 @@
     &.view_index {
         & > .header {
             height: 50px;
+
+            p {
+                font-weight: bold;
+                font-size: 30px;
+                margin: 10px;
+            }
         }
 
         & > .left,
@@ -10,22 +16,32 @@
         }
 
         & > .left {
-            width: 30%;
+            width: 20%;
 
             ul {
-                li {
-                    list-style: disc;
-                    margin-left: 25px;
+                margin-left: 25px;
 
-                    .link {
+                li {
+                    padding: 5px;
+
+                    &.category {
+                        font-weight: bold;
+                    }
+
+                    .click {
                         cursor: pointer;
+                    }
+
+                    p {
+                        width: fit-content;
                     }
                 }
             }
         }
 
         & > .right {
-            width: 70%;
+            width: 80%;
+            vertical-align: top;
         }
     }
 }

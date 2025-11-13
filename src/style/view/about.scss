@@ -1,19 +1,15 @@
 .page_container {
-    &.view_page1 {
+    &.view_about {
         & > .header {
             height: 50px;
         }
 
-        & > .left,
-        & > .right {
-            width: 50%;
-            display: inline-block;
-        }
-
         & > .left {
+            width: 100%;
         }
 
         & > .right {
+            width: 0;
         }
     }
 }
