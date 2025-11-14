@@ -85,13 +85,18 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                         } else {
                             return (
                                 <div>
-                                    <p>This wiki is the reference point for understanding how to use the framework and how it is built.</p>
+                                    <h1>Home</h1>
+                                    <p>
+                                        This wiki is the reference point for understanding how to use the framework and how it is built. Is created
+                                        with jsMvcFw to show everything in real use cases.
+                                    </p>
                                     <p>The menu on the left contains various categories with detailed explanations.</p>
                                 </div>
                             );
                         }
                     })()}
                 </div>
+                <div class="bottom"></div>
             </div>
         </div>
     );

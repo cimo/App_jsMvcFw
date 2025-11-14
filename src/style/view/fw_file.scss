@@ -1,0 +1,11 @@
+@use "../color.scss" as color;
+
+.view_fw_file {
+    ul {
+        margin: 10px 10px 10px 20px !important;
+    }
+
+    .section {
+        margin-bottom: 50px;
+    }
+}

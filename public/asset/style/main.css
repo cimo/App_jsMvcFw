@@ -97,66 +97,168 @@ body *:not(.material-icons) {
   font-size: 14px;
 }
 
-.page_container.view_index > .header {
-  height: 50px;
+table {
+  display: table !important;
+  color: #000000 !important;
+  width: 100% !important;
+  position: relative !important;
+  border-collapse: collapse !important;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.4) !important;
 }
-.page_container.view_index > .header p {
+table .row_empty {
+  display: table-row !important;
+  width: 100% !important;
+  height: 50px !important;
+  position: relative !important;
+}
+table .row_empty .icon_progress {
+  width: 40px !important;
+  height: 40px !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 5px !important;
+}
+table .row_empty .text {
+  position: absolute !important;
+  top: 18px !important;
+  left: 0 !important;
+  right: 0 !important;
+  text-align: center !important;
+}
+table .row {
+  display: table-row !important;
+  width: 100% !important;
+  background-color: #ffffff !important;
+  word-break: break-word !important;
+}
+table .row:not(.row_empty):not(.not_hover):hover {
+  background-color: #a6b2c9 !important;
+  color: #ffffff !important;
+}
+table .row.even {
+  background-color: #f0f2f6 !important;
+}
+table .row.selected_row {
+  background-color: #0091da !important;
+  color: #ffffff !important;
+}
+table .row.selected_row a {
+  cursor: pointer !important;
+  text-decoration: underline !important;
+  color: #ffffff !important;
+}
+table .row .cell {
+  display: table-cell !important;
+  vertical-align: middle !important;
+  padding: 5px !important;
+  height: 50px !important;
+}
+table .row .cell.center {
+  text-align: center !important;
+}
+
+.page_container {
+  text-align: center;
+  text-wrap-style: balance;
+}
+.page_container > .header {
+  height: 50px;
+  position: relative;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.page_container > .left {
+  width: 30%;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+.page_container > .right {
+  width: 70%;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+.page_container > .bottom {
+  height: 50px;
+  position: relative;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.view_index > .header p {
   font-weight: bold;
   font-size: 30px;
   margin: 10px;
 }
-.page_container.view_index > .left, .page_container.view_index > .right {
-  display: inline-block;
+.view_index > .left {
+  width: 200px !important;
 }
-.page_container.view_index > .left {
-  width: 20%;
-}
-.page_container.view_index > .left ul {
+.view_index > .left ul {
   margin-left: 25px;
 }
-.page_container.view_index > .left ul li {
+.view_index > .left ul li {
   padding: 5px;
 }
-.page_container.view_index > .left ul li.category {
+.view_index > .left ul li.category {
   font-weight: bold;
 }
-.page_container.view_index > .left ul li .click {
+.view_index > .left ul li .click {
   cursor: pointer;
 }
-.page_container.view_index > .left ul li p {
+.view_index > .left ul li p {
   width: fit-content;
 }
-.page_container.view_index > .right {
-  width: 80%;
-  vertical-align: top;
+.view_index > .right {
+  width: calc(100% - 200px) !important;
 }
-
-.page_container .view_fw_info {
-  text-wrap-style: balance;
-}
-.page_container .view_fw_info h1 {
+.view_index > .right h1 {
   font-size: 24px;
   font-weight: bold;
 }
-.page_container .view_fw_info p {
+.view_index > .right p {
   margin: 10px;
 }
-.page_container .view_fw_info ul {
+.view_index > .right ul {
   margin: 10px;
   list-style: disc;
 }
-.page_container .view_fw_info ul li {
+.view_index > .right ul li {
   padding: 5px;
 }
+.view_index > .right .title {
+  font-weight: bold;
+}
+.view_index > .right .sub_title {
+  text-decoration: underline;
+}
+.view_index > .right .group {
+  border: 1px solid #000000;
+  margin-right: 10px;
+}
 
-.page_container.view_about > .header {
-  height: 50px;
+.view_fw_file ul {
+  margin: 10px 10px 10px 20px !important;
 }
-.page_container.view_about > .left {
-  width: 100%;
+.view_fw_file .section {
+  margin-bottom: 50px;
 }
-.page_container.view_about > .right {
-  width: 0;
+
+.view_fw_method table {
+  border: 1px solid #000000 !important;
+}
+.view_fw_method table colgroup .cell {
+  width: 50px !important;
+}
+.view_fw_method table colgroup .cell.button_field {
+  width: 200px !important;
+}
+.view_fw_method table thead .row {
+  background-color: #bddeff !important;
+}
+.view_fw_method table .cell {
+  border: 1px solid #000000 !important;
 }
 
 /*# sourceMappingURL=main.css.map */

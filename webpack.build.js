@@ -11,7 +11,6 @@ module.exports = {
     entry: Path.resolve(__dirname, "src/Main.ts"),
     output: {
         filename: "[name].js",
-        //sourceMapFilename: "[name].js.map",
         path: Path.resolve(__dirname, "public/asset/js"),
         publicPath: "/asset/js/"
     },

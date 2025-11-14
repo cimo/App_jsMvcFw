@@ -1,0 +1,71 @@
+@use "color.scss" as color;
+
+table {
+    display: table !important;
+    color: color.$black !important;
+    width: 100% !important;
+    position: relative !important;
+    border-collapse: collapse !important;
+    box-shadow: 0px 1px 6px 0px color.$blackRgb !important;
+
+    .row_empty {
+        display: table-row !important;
+        width: 100% !important;
+        height: 50px !important;
+        position: relative !important;
+
+        .icon_progress {
+            width: 40px !important;
+            height: 40px !important;
+            position: absolute !important;
+            left: 50% !important;
+            top: 5px !important;
+        }
+
+        .text {
+            position: absolute !important;
+            top: 18px !important;
+            left: 0 !important;
+            right: 0 !important;
+            text-align: center !important;
+        }
+    }
+
+    .row {
+        display: table-row !important;
+        width: 100% !important;
+        background-color: color.$white !important;
+        word-break: break-word !important;
+
+        &:not(.row_empty):not(.not_hover):hover {
+            background-color: color.$grey600 !important;
+            color: color.$white !important;
+        }
+
+        &.even {
+            background-color: color.$grey100 !important;
+        }
+
+        &.selected_row {
+            background-color: color.$blueLight !important;
+            color: color.$white !important;
+
+            a {
+                cursor: pointer !important;
+                text-decoration: underline !important;
+                color: color.$white !important;
+            }
+        }
+
+        .cell {
+            display: table-cell !important;
+            vertical-align: middle !important;
+            padding: 5px !important;
+            height: 50px !important;
+
+            &.center {
+                text-align: center !important;
+            }
+        }
+    }
+}

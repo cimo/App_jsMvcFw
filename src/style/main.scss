@@ -1,6 +1,9 @@
 @use "reset.scss";
 @use "font.scss";
 
+@use "table.scss";
+@use "page.scss";
+
 @use "view/index.scss";
-@use "view/fw_info.scss";
-@use "view/about.scss";
+@use "view/fw_file.scss";
+@use "view/fw_method.scss";

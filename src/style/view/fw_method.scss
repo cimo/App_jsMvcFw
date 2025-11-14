@@ -1,0 +1,27 @@
+@use "../color.scss" as color;
+
+.view_fw_method {
+    table {
+        border: 1px solid color.$black !important;
+
+        colgroup {
+            .cell {
+                width: 50px !important;
+
+                &.button_field {
+                    width: 200px !important;
+                }
+            }
+        }
+
+        thead {
+            .row {
+                background-color: color.$blueMedium200 !important;
+            }
+        }
+
+        .cell {
+            border: 1px solid color.$black !important;
+        }
+    }
+}

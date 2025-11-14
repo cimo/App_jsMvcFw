@@ -1,47 +1,70 @@
-.page_container {
-    &.view_index {
-        & > .header {
-            height: 50px;
+@use "../color.scss" as color;
 
-            p {
-                font-weight: bold;
-                font-size: 30px;
-                margin: 10px;
-            }
+.view_index {
+    & > .header {
+        p {
+            font-weight: bold;
+            font-size: 30px;
+            margin: 10px;
         }
+    }
 
-        & > .left,
-        & > .right {
-            display: inline-block;
-        }
+    & > .left {
+        width: 200px !important;
 
-        & > .left {
-            width: 20%;
+        ul {
+            margin-left: 25px;
 
-            ul {
-                margin-left: 25px;
+            li {
+                padding: 5px;
 
-                li {
-                    padding: 5px;
+                &.category {
+                    font-weight: bold;
+                }
 
-                    &.category {
-                        font-weight: bold;
-                    }
+                .click {
+                    cursor: pointer;
+                }
 
-                    .click {
-                        cursor: pointer;
-                    }
-
-                    p {
-                        width: fit-content;
-                    }
+                p {
+                    width: fit-content;
                 }
             }
         }
+    }
 
-        & > .right {
-            width: 80%;
-            vertical-align: top;
+    & > .right {
+        width: calc(100% - 200px) !important;
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        ul {
+            margin: 10px;
+            list-style: disc;
+
+            li {
+                padding: 5px;
+            }
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .sub_title {
+            text-decoration: underline;
+        }
+
+        .group {
+            border: 1px solid color.$black;
+            margin-right: 10px;
         }
     }
 }

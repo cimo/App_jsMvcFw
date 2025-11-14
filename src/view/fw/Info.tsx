@@ -6,8 +6,8 @@ import * as modelIndex from "../../model/Index";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const viewFwInfo = (variableObject: modelIndex.Ivariable): IvirtualNode => {
     return (
-        <div class="view_fw_info">
-            <h1>Introduction to the Framework</h1>
+        <div>
+            <h1>Info</h1>
             <p>
                 The framework is a platform designed to simplify the development of dynamic user interfaces and modern web applications. It provides a
                 clear structure and integrated tools to create reusable components, manage application state, and update the UI reactively, reducing
@@ -32,7 +32,7 @@ const viewFwInfo = (variableObject: modelIndex.Ivariable): IvirtualNode => {
                 </li>
                 <li>
                     Interfaces with JSX: enables defining the interface structure using a declarative syntax that combines logic and markup,
-                    simplifying the creation of complex components.
+                    simplifying the creation of complex components. It's not necessary to use a custom name or special code, just simple html.
                 </li>
                 <li>
                     Dynamic form creation: includes features to generate and manage forms with validation, events, and data binding, reducing manual
@@ -53,7 +53,7 @@ const viewFwInfo = (variableObject: modelIndex.Ivariable): IvirtualNode => {
                 <li>Reduces repetitive code thanks to reusable components.</li>
                 <li>Improves project maintainability and readability.</li>
                 <li>Supports scalability, from small UIs to large applications.</li>
-                <li>No external dependencies and a focus on security.</li>
+                <li>No external dependencies with focus on security and performance.</li>
             </ul>
             <h1>Key Principles</h1>
             <ul>
@@ -61,7 +61,10 @@ const viewFwInfo = (variableObject: modelIndex.Ivariable): IvirtualNode => {
                 <li>Reactivity: the UI responds to data changes in real time.</li>
                 <li>Reduces repetitive code thanks to reusable components.</li>
                 <li>Performance: optimized updates to avoid resource waste.</li>
-                <li>Extensibility: easy integration with external libraries and tools.</li>
+                <li>
+                    Extensibility: easy integration with external libraries and tools (compatibile with 100% of all external library because is
+                    created with pure typescript without dependencies).
+                </li>
                 <li>Secure and easy to use.</li>
             </ul>
         </div>
