@@ -79,7 +79,7 @@ module.exports = {
             inject: false,
             minify: false,
             templateParameters: {
-                name: "App jsmvcfw",
+                name: "App jsMvcFw",
                 urlRoot: "",
                 dateNow: Date.now()
             }
