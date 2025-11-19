@@ -99,7 +99,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                         <p>
                             This example show how coockie works.
                             <br />
-                            Check in your developer window the cookie (refresh your cookie tab after each interaction for show the result).
+                            Check in your dev tool the cookie to see the result.
                         </p>
                         <button
                             onclick={() => {
