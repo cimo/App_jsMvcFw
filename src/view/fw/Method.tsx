@@ -273,6 +273,14 @@ const viewFwMethod = (): IvirtualNode => {
                                     the presence of keys for dynamic lists).
                                 </td>
                             </tr>
+                            <tr class="row">
+                                <td class="cell">{"jsxFragment({ children }: { children: Array<IvirtualNode | string> })"}</td>
+                                <td class="cell">{"Array<IvirtualNode | string>"}</td>
+                                <td class="cell">
+                                    Returns the children without any wrapper, allowing the use of JSX Fragments in the framework without creating an
+                                    additional virtual node. Need be use inside the html code (not how root element).
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </li>

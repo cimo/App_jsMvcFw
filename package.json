@@ -21,7 +21,7 @@
         "execute": "nodemon --config nodemon.json"
     },
     "dependencies": {
-        "@cimo/jsmvcfw": "1.4.24"
+        "@cimo/jsmvcfw": "1.4.26"
     },
     "devDependencies": {
         "typescript": "5.7.2",
