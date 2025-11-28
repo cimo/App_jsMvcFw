@@ -13,7 +13,8 @@ const viewFwMethod = (): IvirtualNode => {
                             <col class="cell" />
                             <col class="cell" />
                         </colgroup>
-                        <thead>
+                        <thead class="filter">
+                            <tr className="row filter_action"></tr>
                             <tr class="row not_hover">
                                 <th class="cell">Signature</th>
                                 <th class="cell">Return type</th>
@@ -89,7 +90,8 @@ const viewFwMethod = (): IvirtualNode => {
                             <col class="cell" />
                             <col class="cell" />
                         </colgroup>
-                        <thead>
+                        <thead class="filter">
+                            <tr className="row filter_action"></tr>
                             <tr class="row not_hover">
                                 <th class="cell">Signature</th>
                                 <th class="cell">Return type</th>
@@ -127,7 +129,8 @@ const viewFwMethod = (): IvirtualNode => {
                             <col class="cell" />
                             <col class="cell" />
                         </colgroup>
-                        <thead>
+                        <thead class="filter">
+                            <tr className="row filter_action"></tr>
                             <tr class="row not_hover">
                                 <th class="cell">Signature</th>
                                 <th class="cell">Return</th>
@@ -160,7 +163,8 @@ const viewFwMethod = (): IvirtualNode => {
                             <col class="cell" />
                             <col class="cell" />
                         </colgroup>
-                        <thead>
+                        <thead class="filter">
+                            <tr className="row filter_action"></tr>
                             <tr class="row not_hover">
                                 <th class="cell">Signature</th>
                                 <th class="cell">Return</th>
@@ -184,7 +188,8 @@ const viewFwMethod = (): IvirtualNode => {
                             <col class="cell" />
                             <col class="cell" />
                         </colgroup>
-                        <thead>
+                        <thead class="filter">
+                            <tr className="row filter_action"></tr>
                             <tr class="row not_hover">
                                 <th class="cell">Signature</th>
                                 <th class="cell">Return</th>
@@ -253,7 +258,8 @@ const viewFwMethod = (): IvirtualNode => {
                             <col class="cell" />
                             <col class="cell" />
                         </colgroup>
-                        <thead>
+                        <thead class="filter">
+                            <tr className="row filter_action"></tr>
                             <tr class="row not_hover">
                                 <th class="cell">Signature</th>
                                 <th class="cell">Return</th>
@@ -292,7 +298,8 @@ const viewFwMethod = (): IvirtualNode => {
                             <col class="cell" />
                             <col class="cell" />
                         </colgroup>
-                        <thead>
+                        <thead class="filter">
+                            <tr className="row filter_action"></tr>
                             <tr class="row not_hover">
                                 <th class="cell">Signature</th>
                                 <th class="cell">Return</th>
@@ -331,7 +338,8 @@ const viewFwMethod = (): IvirtualNode => {
                             <col class="cell" />
                             <col class="cell" />
                         </colgroup>
-                        <thead>
+                        <thead class="filter">
+                            <tr className="row filter_action"></tr>
                             <tr class="row not_hover">
                                 <th class="cell">Signature</th>
                                 <th class="cell">Return type</th>

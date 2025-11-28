@@ -78,6 +78,10 @@ meter {
   all: revert;
 }
 
+body {
+  overflow-x: hidden !important;
+}
+
 .hidden {
   visibility: hidden !important;
 }
@@ -88,13 +92,188 @@ meter {
 
 @font-face {
   font-family: "roboto-regular";
-  font-weight: 100;
   font-style: normal;
-  src: url("../font/roboto-regular.ttf") format("truetype"), url("../font/roboto-regular.woff") format("woff"), url("../font/roboto-regular.woff2") format("woff2");
+  font-weight: 100;
+  src: url("../font/roboto-regular.woff2") format("woff2"), url("../font/roboto-regular.woff") format("woff"), url("../font/roboto-regular.ttf") format("truetype");
 }
-body *:not(.material-icons) {
+@font-face {
+  font-family: "material-icon-rounded";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: block;
+  src: url("../font/material-icon-rounded.woff2") format("woff2"), url("../font/material-icon-rounded.woff") format("woff");
+}
+body *:not(.cls_icon) {
   font-family: "roboto-regular" !important;
-  font-size: 14px;
+  font-size: 15px !important;
+}
+
+.cls_button {
+  display: block !important;
+  margin: 0 10px !important;
+  padding: 5px 10px !important;
+  min-width: fit-content !important;
+  text-align: center !important;
+  border-radius: 4px !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.4) !important;
+  height: 30px !important;
+}
+.cls_button:not(:disabled) {
+  cursor: pointer !important;
+}
+.cls_button:disabled {
+  color: #191e29 !important;
+  background-color: #56698f !important;
+  box-shadow: none !important;
+}
+.cls_button.cls_button_primary {
+  color: #ffffff !important;
+  background-color: #33b215 !important;
+}
+.cls_button.cls_button_primary:hover {
+  background-color: #40df1a !important;
+}
+.cls_button.cls_button_secondary {
+  color: #ffffff !important;
+  background-color: #005eb8 !important;
+}
+.cls_button.cls_button_secondary:hover {
+  background-color: #2594ff !important;
+}
+.cls_button.cls_button_flat {
+  color: #005eb8 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #005eb8 !important;
+  box-shadow: none !important;
+}
+.cls_button.cls_button_flat:hover {
+  background-color: #f0f2f6 !important;
+}
+.cls_button.cls_button_danger {
+  color: #ffffff !important;
+  background-color: #dc003d !important;
+}
+.cls_button.cls_button_danger:hover {
+  background-color: #ff3d72 !important;
+}
+.cls_button.cls_button_remove {
+  color: #dc003d !important;
+}
+.cls_button.cls_icon {
+  filter: drop-shadow(1px 0 6px rgba(0, 0, 0, 0.4)) !important;
+  box-shadow: none !important;
+}
+.cls_button .cls_button_label {
+  display: inline-block !important;
+}
+
+.cls_select {
+  width: fit-content !important;
+  padding: 5px !important;
+  border: 1px solid #a6b2c9 !important;
+  border-radius: 4px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  text-align: left !important;
+  display: block !important;
+}
+
+.cls_input_text {
+  width: 200px !important;
+  padding: 5px !important;
+  border: 1px solid #a6b2c9 !important;
+  border-radius: 4px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  text-align: left !important;
+  display: block !important;
+}
+
+.cls_textarea {
+  width: 200px !important;
+  padding: 5px !important;
+  border: 1px solid #a6b2c9 !important;
+  border-radius: 4px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  text-align: left !important;
+  display: block !important;
+}
+
+.field_container {
+  display: block !important;
+}
+.field_container .field_value.cls_select, .field_container .field_value.cls_input_text {
+  margin: 0 10px !important;
+}
+
+.filter {
+  height: 40px !important;
+  display: table-header-group !important;
+  border-bottom: 1px solid #a6b2c9 !important;
+}
+.filter .row {
+  background-color: #005eb8 !important;
+  color: #ffffff !important;
+  word-break: break-word !important;
+}
+.filter .row.filter_action {
+  border: none !important;
+}
+.filter .row.filter_action .container_button {
+  position: absolute !important;
+  top: -50px !important;
+  right: 0 !important;
+}
+.filter .row .cell {
+  vertical-align: middle !important;
+  padding: 10px !important;
+  min-width: auto !important;
+}
+
+.cls_icon {
+  font-family: "material-icon-rounded" !important;
+  position: relative !important;
+  text-transform: none !important;
+  font-feature-settings: "liga" !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 20px !important;
+  height: 20px !important;
+}
+
+html {
+  background-color: #f0f2f6 !important;
+}
+
+.page_container {
+  text-align: left !important;
+  text-wrap-style: balance !important;
+}
+.page_container > .header {
+  height: 40px !important;
+  z-index: 101 !important;
+  position: relative !important;
+}
+.page_container > .left {
+  width: 60% !important;
+  margin: 10px !important;
+  position: relative !important;
+  display: inline-block !important;
+  vertical-align: top !important;
+}
+.page_container > .right {
+  width: 30% !important;
+  margin: 10px !important;
+  position: relative !important;
+  display: inline-block !important;
+  vertical-align: top !important;
+}
+.page_container > .footer {
+  height: 40px !important;
+  position: relative !important;
+  margin-top: 10px !important;
 }
 
 table {
@@ -103,7 +282,8 @@ table {
   width: 100% !important;
   position: relative !important;
   border-collapse: collapse !important;
-  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid #a6b2c9 !important;
 }
 table .row_empty {
   display: table-row !important;
@@ -112,11 +292,11 @@ table .row_empty {
   position: relative !important;
 }
 table .row_empty .icon_progress {
-  width: 40px !important;
-  height: 40px !important;
+  width: 18px !important;
+  height: 18px !important;
   position: absolute !important;
   left: 50% !important;
-  top: 5px !important;
+  top: 36px !important;
 }
 table .row_empty .text {
   position: absolute !important;
@@ -132,11 +312,11 @@ table .row {
   word-break: break-word !important;
 }
 table .row:not(.row_empty):not(.not_hover):hover {
-  background-color: #a6b2c9 !important;
+  background-color: #56698f !important;
   color: #ffffff !important;
 }
 table .row.even {
-  background-color: #f0f2f6 !important;
+  background-color: #d9dee8 !important;
 }
 table .row.selected_row {
   background-color: #0091da !important;
@@ -150,144 +330,116 @@ table .row.selected_row a {
 table .row .cell {
   display: table-cell !important;
   vertical-align: middle !important;
-  padding: 5px !important;
+  padding: 0 10px !important;
   height: 50px !important;
 }
 table .row .cell.center {
   text-align: center !important;
 }
-
-.page_container {
-  text-align: center;
-  text-wrap-style: balance;
+table .row .cell.button button:not(:first-child) {
+  margin-top: 5px !important;
 }
-.page_container > .header {
-  height: 50px;
-  position: relative;
-  margin-bottom: 10px;
-  text-align: left;
+table .empty_state {
+  height: auto !important;
+  text-align: center !important;
+  padding-top: 10px !important;
+  color: #7f90b3 !important;
 }
-.page_container > .left {
-  width: 30%;
-  position: relative;
-  display: inline-block;
-  text-align: left;
+table .empty_state p {
+  font-size: 18px !important;
+  padding: 0 !important;
 }
-.page_container > .right {
-  width: 70%;
-  position: relative;
-  display: inline-block;
-  text-align: left;
-  vertical-align: top;
-}
-.page_container > .bottom {
-  height: 50px;
-  position: relative;
-  margin-top: 10px;
-  text-align: left;
+table .empty_state .icon {
+  width: 50px !important;
+  height: 50px !important;
+  color: #b9c2d5 !important;
 }
 
 .view_index > .header p {
-  font-weight: bold;
-  font-size: 30px;
-  margin: 10px;
+  font-weight: bold !important;
+  font-size: 30px !important;
+  margin: 10px !important;
 }
 .view_index > .left {
   width: 200px !important;
 }
 .view_index > .left ul {
-  margin-left: 25px;
+  margin-left: 25px !important;
 }
 .view_index > .left ul li {
-  padding: 5px;
+  padding: 5px !important;
 }
 .view_index > .left ul li.category {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 .view_index > .left ul li .click {
   cursor: pointer;
 }
 .view_index > .left ul li p {
-  width: fit-content;
+  width: fit-content !important;
 }
 .view_index > .right {
-  width: calc(100% - 200px) !important;
+  width: calc(100% - 240px) !important;
 }
 .view_index > .right h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 10px 0 10px 0;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  margin: 10px 0 10px 0 !important;
 }
 .view_index > .right p {
-  margin: 10px;
+  margin: 10px !important;
 }
 .view_index > .right ul {
-  list-style: disc;
-  margin: 10px 10px 10px 20px !important;
+  list-style: disc !important;
+  list-style-position: inside !important;
 }
 .view_index > .right ul li {
-  padding: 5px;
+  padding: 5px !important;
 }
 .view_index > .right .title {
-  font-weight: bold;
+  font-weight: bold !important;
+  display: inline-block !important;
+  margin: 10px 0 !important;
 }
 .view_index > .right .sub_title {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 .view_index > .right .group {
-  border: 1px solid #000000;
-  margin-right: 10px;
-}
-
-.view_content {
-  margin-right: 10px;
-}
-
-table {
   border: 1px solid #000000 !important;
+  margin-right: 10px !important;
 }
+
+.view_content .section {
+  margin-bottom: 20px !important;
+}
+
 table colgroup .cell {
   width: 50px !important;
-}
-table thead .row {
-  background-color: #bddeff !important;
-}
-table .cell {
-  border: 1px solid #000000 !important;
 }
 
 .view_example > .header {
   height: auto !important;
 }
 .view_example > .header h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 10px;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  margin: 10px !important;
 }
 .view_example > .left {
   width: 100% !important;
 }
 .view_example > .left .section {
-  margin: 10px;
+  margin: 10px !important;
 }
 .view_example > .left .section .title {
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: bold !important;
+  font-size: 24px !important;
 }
-.view_example > .left button {
-  border: 1px solid #000000;
-  background-color: #ccd3e0;
-  padding: 5px;
-  margin: 5px;
-  box-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
+.view_example > .left .section .cls_button {
+  display: inline-block !important;
 }
 .view_example p {
-  margin: 10px;
-}
-
-.view_fw_file .section {
-  margin-bottom: 50px;
+  margin: 10px !important;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,7 +2,7 @@ import { jsxFactory, IvirtualNode } from "@cimo/jsmvcfw/dist/src/Main";
 
 const viewFwFile = (): IvirtualNode => {
     return (
-        <div class="view_content view_fw_file">
+        <div class="view_content">
             <h1>File</h1>
             <div class="section">
                 <p class="title">JsMvcFw.ts</p>

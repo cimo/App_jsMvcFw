@@ -9,7 +9,8 @@ const viewMvcModel = (): IvirtualNode => {
                     <col class="cell" />
                     <col class="cell" />
                 </colgroup>
-                <thead>
+                <thead class="filter">
+                    <tr className="row filter_action"></tr>
                     <tr class="row not_hover">
                         <th class="cell">Interface</th>
                         <th class="cell">Description</th>

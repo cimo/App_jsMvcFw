@@ -1,11 +1,12 @@
-@use "../color.scss" as color;
+@use "../setting/color.scss" as color;
+@use "../setting/parameter.scss" as parameter;
 
 .view_index {
     & > .header {
         p {
-            font-weight: bold;
-            font-size: 30px;
-            margin: 10px;
+            font-weight: bold !important;
+            font-size: parameter.$fontSizeMedium !important;
+            margin: 10px !important;
         }
     }
 
@@ -13,13 +14,13 @@
         width: 200px !important;
 
         ul {
-            margin-left: 25px;
+            margin-left: 25px !important;
 
             li {
-                padding: 5px;
+                padding: 5px !important;
 
                 &.category {
-                    font-weight: bold;
+                    font-weight: bold !important;
                 }
 
                 .click {
@@ -27,69 +28,61 @@
                 }
 
                 p {
-                    width: fit-content;
+                    width: fit-content !important;
                 }
             }
         }
     }
 
     & > .right {
-        width: calc(100% - 200px) !important;
+        width: calc(100% - 240px) !important;
 
         h1 {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 10px 0 10px 0;
+            font-size: parameter.$fontSizeNormalPlus !important;
+            font-weight: bold !important;
+            margin: 10px 0 10px 0 !important;
         }
 
         p {
-            margin: 10px;
+            margin: 10px !important;
         }
 
         ul {
-            list-style: disc;
-            margin: 10px 10px 10px 20px !important;
+            list-style: disc !important;
+            list-style-position: inside !important;
 
             li {
-                padding: 5px;
+                padding: 5px !important;
             }
         }
 
         .title {
-            font-weight: bold;
+            font-weight: bold !important;
+            display: inline-block !important;
+            margin: 10px 0 !important;
         }
 
         .sub_title {
-            text-decoration: underline;
+            text-decoration: underline !important;
         }
 
         .group {
-            border: 1px solid color.$black;
-            margin-right: 10px;
+            border: 1px solid color.$black !important;
+            margin-right: 10px !important;
         }
     }
 }
 
 .view_content {
-    margin-right: 10px;
+    .section {
+        margin-bottom: 20px !important;
+    }
 }
 
 table {
-    border: 1px solid color.$black !important;
-
     colgroup {
         .cell {
             width: 50px !important;
         }
-    }
-
-    thead {
-        .row {
-            background-color: color.$blueMedium200 !important;
-        }
-    }
-
-    .cell {
-        border: 1px solid color.$black !important;
     }
 }

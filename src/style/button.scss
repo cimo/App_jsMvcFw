@@ -1,0 +1,74 @@
+@use "setting/color.scss" as color;
+
+.cls_button {
+    display: block !important;
+    margin: 0 10px !important;
+    padding: 5px 10px !important;
+    min-width: fit-content !important;
+    text-align: center !important;
+    border-radius: 4px !important;
+    text-transform: uppercase !important;
+    box-shadow: color.$boxShadow !important;
+    height: calc(15px * 2) !important;
+
+    &:not(:disabled) {
+        cursor: pointer !important;
+    }
+
+    &:disabled {
+        color: color.$grey1400 !important;
+        background-color: color.$buttonDisabled !important;
+        box-shadow: none !important;
+    }
+
+    &.cls_button_primary {
+        color: color.$white !important;
+        background-color: color.$buttonPrimary !important;
+
+        &:hover {
+            background-color: color.$buttonPrimaryHover !important;
+        }
+    }
+
+    &.cls_button_secondary {
+        color: color.$white !important;
+        background-color: color.$buttonSecondary !important;
+
+        &:hover {
+            background-color: color.$buttonSecondaryHover !important;
+        }
+    }
+
+    &.cls_button_flat {
+        color: color.$buttonFlat !important;
+        background-color: color.$white !important;
+        border: 1px solid color.$buttonFlat !important;
+        box-shadow: none !important;
+
+        &:hover {
+            background-color: color.$buttonFlatHover !important;
+        }
+    }
+
+    &.cls_button_danger {
+        color: color.$white !important;
+        background-color: color.$buttonDanger !important;
+
+        &:hover {
+            background-color: color.$buttonDangerHover !important;
+        }
+    }
+
+    &.cls_button_remove {
+        color: color.$red !important;
+    }
+
+    &.cls_icon {
+        filter: drop-shadow(1px 0 6px color.$blackRgba) !important;
+        box-shadow: none !important;
+    }
+
+    .cls_button_label {
+        display: inline-block !important;
+    }
+}

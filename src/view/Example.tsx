@@ -20,6 +20,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                 <div class="left">
                     <div class="section">
                         <button
+                            class="cls_button cls_button_secondary"
                             onclick={() => {
                                 methodObject.onClickLink("/");
                             }}
@@ -31,6 +32,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                         <p class="title">Example: Increment count.</p>
                         <p>This example change the value in the controller and will be permanent in the view.</p>
                         <button
+                            class="cls_button cls_button_primary"
                             onclick={() => {
                                 methodObject.onClickCount();
                             }}
@@ -55,6 +57,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                             Text: <span jsmvcfw-elementHookName="elementDivTest">Exemplum textus.</span>
                         </p>
                         <button
+                            class="cls_button cls_button_primary"
                             onclick={() => {
                                 methodObject.onClickElementHook();
                             }}
@@ -70,6 +73,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                             If the variable change the associate method, defined in the controller, will be executed.
                         </p>
                         <button
+                            class="cls_button cls_button_primary"
                             onclick={() => {
                                 methodObject.onClickVariableWatchTest();
                             }}
@@ -102,6 +106,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                             Check in your dev tool the cookie to see the result (the read value for this example is "1").
                         </p>
                         <button
+                            class="cls_button cls_button_primary"
                             onclick={() => {
                                 methodObject.onClickWriteCookie();
                             }}
@@ -109,6 +114,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                             Click for create
                         </button>
                         <button
+                            class="cls_button cls_button_primary"
                             onclick={() => {
                                 methodObject.onClickReadCookie();
                             }}
@@ -116,6 +122,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                             Click for read
                         </button>
                         <button
+                            class="cls_button cls_button_primary"
                             onclick={() => {
                                 methodObject.onClickRemoveCookie();
                             }}
@@ -134,6 +141,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                             Check in your dev tool the local storage to see the result (the read value for this example is "1").
                         </p>
                         <button
+                            class="cls_button cls_button_primary"
                             onclick={() => {
                                 methodObject.onClickWriteStorage();
                             }}
@@ -141,6 +149,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                             Click for create
                         </button>
                         <button
+                            class="cls_button cls_button_primary"
                             onclick={() => {
                                 methodObject.onClickReadStorage();
                             }}
@@ -148,6 +157,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                             Click for read
                         </button>
                         <button
+                            class="cls_button cls_button_primary"
                             onclick={() => {
                                 methodObject.onClickRemoveStorage();
                             }}

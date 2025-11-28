@@ -1,0 +1,29 @@
+@use "setting/color.scss" as color;
+
+.filter {
+    height: 40px !important;
+    display: table-header-group !important;
+    border-bottom: 1px solid color.$grey600 !important;
+
+    .row {
+        background-color: color.$blueMedium !important;
+        color: color.$white !important;
+        word-break: break-word !important;
+
+        &.filter_action {
+            border: none !important;
+
+            .container_button {
+                position: absolute !important;
+                top: -50px !important;
+                right: 0 !important;
+            }
+        }
+
+        .cell {
+            vertical-align: middle !important;
+            padding: 10px !important;
+            min-width: auto !important;
+        }
+    }
+}

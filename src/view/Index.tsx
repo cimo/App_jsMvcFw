@@ -130,7 +130,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                         }
                     })()}
                 </div>
-                <div class="bottom"></div>
+                <div class="footer"></div>
             </div>
         </div>
     );

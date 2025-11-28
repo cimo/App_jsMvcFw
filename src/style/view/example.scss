@@ -1,38 +1,34 @@
-@use "../color.scss" as color;
+@use "../setting/color.scss" as color;
+@use "../setting/parameter.scss" as parameter;
 
 .view_example {
     & > .header {
         height: auto !important;
 
         h1 {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 10px;
+            font-size: parameter.$fontSizeNormalPlus !important;
+            font-weight: bold !important;
+            margin: 10px !important;
         }
     }
     & > .left {
         width: 100% !important;
 
         .section {
-            margin: 10px;
+            margin: 10px !important;
 
             .title {
-                font-weight: bold;
-                font-size: 18px;
+                font-weight: bold !important;
+                font-size: parameter.$fontSizeNormalPlus !important;
             }
-        }
 
-        button {
-            border: 1px solid color.$black;
-            background-color: color.$grey400;
-            padding: 5px;
-            margin: 5px;
-            box-shadow: 1px 1px color.$blackRgb;
-            cursor: pointer;
+            .cls_button {
+                display: inline-block !important;
+            }
         }
     }
 
     p {
-        margin: 10px;
+        margin: 10px !important;
     }
 }
