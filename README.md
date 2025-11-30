@@ -1,6 +1,6 @@
-# App_jsmvcfw
+# App_jsMvcFw
 
-App example for npm_jsmvcfw package.
+App example for Npm_jsMvcFw package.
 
 ## Info:
 
