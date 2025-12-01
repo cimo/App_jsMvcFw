@@ -953,10 +953,6 @@ class Example {
     // Variable
     __publicField(this, "variableObject");
     __publicField(this, "methodObject");
-    __publicField(this, "elementDivTest");
-    __publicField(this, "elementObserverTest");
-    __publicField(this, "elementCookieRead");
-    __publicField(this, "elementStorageRead");
     // Method
     __publicField(this, "onClickLink", (pagePath) => {
       (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.navigateTo)(pagePath);
@@ -965,9 +961,7 @@ class Example {
       this.variableObject.count.state += 1;
     });
     __publicField(this, "onClickElementHook", () => {
-      if (this.elementDivTest) {
-        this.elementDivTest.innerText = "Novum exemplum textus.";
-      }
+      this.elementHookObject.elementDivTest.innerText = "Novum exemplum textus.";
     });
     __publicField(this, "onClickVariableWatchTest", () => {
       this.variableObject.variableWatchTest.state = "Exemplum textus.";
@@ -976,11 +970,11 @@ class Example {
       alert("actionWatchTest");
     });
     __publicField(this, "statusElmentObserverTest", () => {
-      if (this.elementDivTest) {
-        (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.elementObserver)(this.elementDivTest, (element, change) => {
+      if (this.elementHookObject.elementDivTest) {
+        (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.elementObserver)(this.elementHookObject.elementDivTest, (element, change) => {
           (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.elementObserverOff)(element);
-          if (change.type === "childList" && this.elementObserverTest) {
-            this.elementObserverTest.innerText = "jsmvcfw-elementHookName is changed.";
+          if (change.type === "childList") {
+            this.elementHookObject.elementObserverTest.innerText = "jsmvcfw-elementHookName is changed.";
           }
           (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.elementObserverOn)(element);
         });
@@ -988,55 +982,39 @@ class Example {
     });
     __publicField(this, "onClickWriteCookie", () => {
       (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.writeCookie)("test", "1");
-      if (this.elementCookieRead) {
-        this.elementCookieRead.innerText = "Created";
-      }
+      this.elementHookObject.elementCookieRead.innerText = "Created";
     });
     __publicField(this, "onClickReadCookie", () => {
       const result = (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.readCookie)("test");
-      if (this.elementCookieRead) {
-        if (result) {
-          this.elementCookieRead.innerText = result;
-        } else {
-          this.elementCookieRead.innerText = "";
-        }
+      if (result) {
+        this.elementHookObject.elementCookieRead.innerText = result;
+      } else {
+        this.elementHookObject.elementCookieRead.innerText = "";
       }
     });
     __publicField(this, "onClickRemoveCookie", () => {
       (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.removeCookie)("test");
-      if (this.elementCookieRead) {
-        this.elementCookieRead.innerText = "Removed";
-      }
+      this.elementHookObject.elementCookieRead.innerText = "Removed";
     });
     __publicField(this, "onClickWriteStorage", () => {
       (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.writeStorage)("test", "1");
-      if (this.elementStorageRead) {
-        this.elementStorageRead.innerText = "Created";
-      }
+      this.elementHookObject.elementStorageRead.innerText = "Created";
     });
     __publicField(this, "onClickReadStorage", () => {
       const result = (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.readStorage)("test");
-      if (this.elementStorageRead) {
-        if (result) {
-          this.elementStorageRead.innerText = result;
-        } else {
-          this.elementStorageRead.innerText = "";
-        }
+      if (result) {
+        this.elementHookObject.elementStorageRead.innerText = result;
+      } else {
+        this.elementHookObject.elementStorageRead.innerText = "";
       }
     });
     __publicField(this, "onClickRemoveStorage", () => {
       (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.removeStorage)("test");
-      if (this.elementStorageRead) {
-        this.elementStorageRead.innerText = "Removed";
-      }
+      this.elementHookObject.elementStorageRead.innerText = "Removed";
     });
     __publicField(this, "elementHookObject", {});
     this.variableObject = {};
     this.methodObject = {};
-    this.elementDivTest = null;
-    this.elementObserverTest = null;
-    this.elementCookieRead = null;
-    this.elementStorageRead = null;
   }
   variable() {
     this.variableObject = (0,_cimo_jsmvcfw_dist_src_Main__WEBPACK_IMPORTED_MODULE_0__.variableBind)(
@@ -1079,10 +1057,6 @@ class Example {
     return resultList;
   }
   rendered() {
-    this.elementDivTest = this.elementHookObject.elementDivTest;
-    this.elementObserverTest = this.elementHookObject.elementObserverTest;
-    this.elementCookieRead = this.elementHookObject.elementCookieRead;
-    this.elementStorageRead = this.elementHookObject.elementStorageRead;
     this.statusElmentObserverTest();
   }
   destroy() {
