@@ -1,4 +1,5 @@
 import { jsxFactory, IvirtualNode } from "@cimo/jsmvcfw/dist/src/Main";
+import { Csc } from "@cimo/schedule_calendar/dist/src/Main";
 
 // Source
 import * as modelIndex from "../model/Index";
@@ -132,6 +133,25 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                 </div>
                 <div class="footer"></div>
             </div>
+            <div class="calendar"></div>
+            {(() => {
+                setTimeout(() => {
+                    const csc = new Csc(
+                        { locale: "ja-JP", yearBack: 10, yearForward: 10, isStartOnMonday: false, isHighlightToday: true },
+                        ".calendar"
+                    );
+                    csc.setWeekdayList(["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]);
+                    csc.taskList = (year: number, month: number) => {
+                        // eslint-disable-next-line no-console
+                        console.log("cimo1", year, month);
+                    };
+                    csc.taskButton = (elementDiv: HTMLDivElement, dayNumber: number) => {
+                        // eslint-disable-next-line no-console
+                        console.log("cimo2", elementDiv, dayNumber);
+                    };
+                    csc.create();
+                }, 3000);
+            })()}
         </div>
     );
 };
