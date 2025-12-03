@@ -34,7 +34,7 @@ export default class Example implements Icontroller {
     };
 
     private onClickElementHook = (): void => {
-        this.elementHookObject.elementDivTest.innerText = "Novum exemplum textus.";
+        this.hookObject.elementDivTest.innerText = "Novum exemplum textus.";
     };
 
     private onClickVariableWatchTest = (): void => {
@@ -46,12 +46,12 @@ export default class Example implements Icontroller {
     };
 
     private statusElmentObserverTest = (): void => {
-        if (this.elementHookObject.elementDivTest) {
-            elementObserver(this.elementHookObject.elementDivTest, (element, change) => {
+        if (this.hookObject.elementDivTest) {
+            elementObserver(this.hookObject.elementDivTest, (element, change) => {
                 elementObserverOff(element);
 
                 if (change.type === "childList") {
-                    this.elementHookObject.elementObserverTest.innerText = "jsmvcfw-elementHookName is changed.";
+                    this.hookObject.elementObserverTest.innerText = "jsmvcfw-elementHookName is changed.";
                 }
 
                 elementObserverOn(element);
@@ -62,45 +62,45 @@ export default class Example implements Icontroller {
     private onClickWriteCookie = (): void => {
         writeCookie<string>("test", "1");
 
-        this.elementHookObject.elementCookieRead.innerText = "Created";
+        this.hookObject.elementCookieRead.innerText = "Created";
     };
 
     private onClickReadCookie = (): void => {
         const result = readCookie<string>("test");
 
         if (result) {
-            this.elementHookObject.elementCookieRead.innerText = result;
+            this.hookObject.elementCookieRead.innerText = result;
         } else {
-            this.elementHookObject.elementCookieRead.innerText = "";
+            this.hookObject.elementCookieRead.innerText = "";
         }
     };
 
     private onClickRemoveCookie = (): void => {
         removeCookie("test");
 
-        this.elementHookObject.elementCookieRead.innerText = "Removed";
+        this.hookObject.elementCookieRead.innerText = "Removed";
     };
 
     private onClickWriteStorage = (): void => {
         writeStorage<string>("test", "1");
 
-        this.elementHookObject.elementStorageRead.innerText = "Created";
+        this.hookObject.elementStorageRead.innerText = "Created";
     };
 
     private onClickReadStorage = (): void => {
         const result = readStorage<string>("test");
 
         if (result) {
-            this.elementHookObject.elementStorageRead.innerText = result;
+            this.hookObject.elementStorageRead.innerText = result;
         } else {
-            this.elementHookObject.elementStorageRead.innerText = "";
+            this.hookObject.elementStorageRead.innerText = "";
         }
     };
 
     private onClickRemoveStorage = (): void => {
         removeStorage("test");
 
-        this.elementHookObject.elementStorageRead.innerText = "Removed";
+        this.hookObject.elementStorageRead.innerText = "Removed";
     };
 
     constructor() {
@@ -108,7 +108,7 @@ export default class Example implements Icontroller {
         this.methodObject = {} as modelExample.Imethod;
     }
 
-    elementHookObject = {} as modelExample.IelementHook;
+    hookObject = {} as modelExample.IelementHook;
 
     variable(): void {
         this.variableObject = variableBind(

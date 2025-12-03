@@ -35,7 +35,7 @@ const viewMvcController = (): IvirtualNode => {
                         <td class="cell">Initializes variables.</td>
                     </tr>
                     <tr class="row">
-                        <td class="cell">{"elementHookObject"}</td>
+                        <td class="cell">{"hookObject"}</td>
                         <td class="cell">{"modelIndex.IelementHook"}</td>
                         <td class="cell">
                             Keeps references to DOM element hooks for dynamic updates (with this tag in the view {"jsmvcfw-elementHookName='xxx'"})

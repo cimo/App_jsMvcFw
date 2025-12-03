@@ -23,7 +23,7 @@ export default class Index implements Icontroller {
         this.methodObject = {} as modelIndex.Imethod;
     }
 
-    elementHookObject = {} as modelIndex.IelementHook;
+    hookObject = {} as modelIndex.IelementHook;
 
     variable(): void {
         this.variableObject = variableBind(
