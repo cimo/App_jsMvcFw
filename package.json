@@ -1,6 +1,6 @@
 {
     "name": "app_jsmvcfw",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Example app with npm_jsmvcfw package.",
     "author": "cimo",
     "license": "MIT",
@@ -8,12 +8,13 @@
         "type": "git",
         "url": "git+https://github.com/cimo/App_jsmvcfw.git"
     },
+    "type": "module",
     "scripts": {
         "preinstall": "npx npm-force-resolutions",
         "remove_dist": "node -e \"const fs = require('fs'); try{ fs.rmdirSync('./dist/', { recursive: true }) } catch{}; process.exit(0);\"",
         "remove_public_js": "node -e \"const fs = require('fs'); try{ fs.rmdirSync('./public/asset/js/', { recursive: true }) } catch{}; process.exit(0);\"",
         "remove_public_style": "node -e \"const fs = require('fs'); try{ fs.rmdirSync('./public/asset/style/', { recursive: true }) } catch{}; process.exit(0);\"",
-        "check": "eslint --no-cache --config eslint.config.cjs",
+        "check": "eslint --no-cache --config eslint.config.js",
         "sass": "sass ./src/style/main.scss ./public/asset/style/main.css",
         "build_tsc": "npm run remove_dist && tsc --build tsconfig.tsc.json",
         "build_app": "npm run remove_public_js && npm run remove_public_style && npm run sass && tsc --noEmit --project tsconfig.json && webpack --config webpack.build.js",
@@ -21,7 +22,7 @@
         "execute": "nodemon --config nodemon.json"
     },
     "dependencies": {
-        "@cimo/jsmvcfw": "1.4.28"
+        "@cimo/jsmvcfw": "1.4.29"
     },
     "devDependencies": {
         "typescript": "5.7.2",
@@ -30,7 +31,6 @@
         "@typescript-eslint/eslint-plugin": "8.24.1",
         "eslint-plugin-prettier": "5.2.1",
         "prettier": "3.4.2",
-        "globals": "15.13.0",
         "nodemon": "3.1.9",
         "@types/node": "22.10.2",
         "sass": "1.83.0",

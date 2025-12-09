@@ -1,4 +1,4 @@
-import { Icontroller, IvariableEffect, IvirtualNode, variableBind, navigateTo } from "@cimo/jsmvcfw/dist/src/Main";
+import { Icontroller, IvariableEffect, IvirtualNode, variableBind, navigateTo } from "@cimo/jsmvcfw/dist/src/Main.js";
 
 // Source
 import * as modelIndex from "../model/Index";

@@ -13,7 +13,7 @@ import {
     writeStorage,
     readStorage,
     removeStorage
-} from "@cimo/jsmvcfw/dist/src/Main";
+} from "@cimo/jsmvcfw/dist/src/Main.js";
 
 // Source
 import * as modelExample from "../model/Example";

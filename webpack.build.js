@@ -1,10 +1,14 @@
-const Path = require("path");
-const webpack = require("webpack");
-const TerserPlugin = require("terser-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CompressionPlugin = require("compression-webpack-plugin");
+import Path from "path";
+import { fileURLToPath } from "url";
+import webpack from "webpack";
+import TerserPlugin from "terser-webpack-plugin";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import CompressionPlugin from "compression-webpack-plugin";
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = Path.dirname(__filename);
+
+export default {
     target: "web",
     devtool: "source-map",
     mode: "development",
