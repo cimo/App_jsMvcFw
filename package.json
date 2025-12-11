@@ -1,7 +1,7 @@
 {
     "name": "app_jsmvcfw",
     "version": "1.0.1",
-    "description": "Example app with npm_jsmvcfw package.",
+    "description": "Example app, with a wiki, to demonstrate how to use the framework.",
     "author": "cimo",
     "license": "MIT",
     "repository": {

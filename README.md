@@ -1,10 +1,10 @@
 # App_jsMvcFw
 
-App example for Npm_jsMvcFw package.
+App example with Npm_jsMvcFw package.
 
 ## Info:
 
-This is the example app, with a wiki, for understanding how to use the framework and how it is built.
+Example app, with a wiki, to demonstrate how to use the framework.
 Is created with "Npm_jsMvcFw" to show everything in real use cases.
 
 ## Installation
