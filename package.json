@@ -1,6 +1,6 @@
 {
     "name": "app_jsmvcfw",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "description": "Example app, with a wiki, to demonstrate how to use the framework.",
     "author": "cimo",
     "license": "MIT",
@@ -22,7 +22,7 @@
         "execute": "nodemon --config nodemon.json"
     },
     "dependencies": {
-        "@cimo/jsmvcfw": "1.4.33"
+        "@cimo/jsmvcfw": "1.4.34"
     },
     "devDependencies": {
         "typescript": "5.7.2",
