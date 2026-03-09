@@ -12,10 +12,10 @@ export interface Imethod {
     onClickVariableWatchTest: () => void;
     onClickWriteCookie: () => void;
     onClickReadCookie: () => void;
-    onClickRemoveCookie: () => void;
+    onClickDeleteCookie: () => void;
     onClickWriteStorage: () => void;
     onClickReadStorage: () => void;
-    onClickRemoveStorage: () => void;
+    onClickDeleteStorage: () => void;
 }
 
 export interface IelementHook extends Record<string, Element | Element[]> {

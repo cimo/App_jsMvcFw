@@ -114,7 +114,7 @@ const viewFwMethod = (): IvirtualNode => {
                                 </td>
                             </tr>
                             <tr class="row">
-                                <td class="cell">{"removeCookie(tag: string)"} </td>
+                                <td class="cell">{"deleteCookie(tag: string)"} </td>
                                 <td class="cell">{"void"}</td>
                                 <td class="cell">Deletes the cookie by setting its expiration date to a past timestamp.</td>
                             </tr>
@@ -358,9 +358,9 @@ const viewFwMethod = (): IvirtualNode => {
                                 <td class="cell">Retrieves and decodes the stored value from localStorage, parsing JSON if applicable.</td>
                             </tr>
                             <tr class="row">
-                                <td class="cell">{"removeStorage(tag: string)"} </td>
+                                <td class="cell">{"deleteStorage(tag: string)"} </td>
                                 <td class="cell">{"void"}</td>
-                                <td class="cell">Removes the item from localStorage using the namespaced key.</td>
+                                <td class="cell">Delete the item from localStorage using the namespaced key.</td>
                             </tr>
                         </tbody>
                     </table>

@@ -45,7 +45,7 @@ const viewFwFile = (): IvirtualNode => {
                     <ul>
                         <li>Cookie writing: writeCookie stores data as Base64-encoded JSON with optional expiration, HTTP-only flag, and path.</li>
                         <li>Cookie reading: readCookie retrieves and decodes stored cookies, automatically parsing JSON if valid.</li>
-                        <li>Cookie removal: removeCookie deletes cookies by setting their expiration date to a past timestamp.</li>
+                        <li>Cookie removal: deleteCookie deletes cookies by setting their expiration date to a past timestamp.</li>
                     </ul>
                     <p class="sub_title">Architecture:</p>
                     <ul>
@@ -103,8 +103,8 @@ const viewFwFile = (): IvirtualNode => {
                             Event emission: The emit method triggers all listeners associated with a given event, passing the appropriate payload.
                         </li>
                         <li>
-                            Event unsubscription: The off method removes a specific listener or all matching listeners for an event, with optional
-                            full removal.
+                            Event unsubscription: The off method delete a specific listener or all matching listeners for an event, with optional full
+                            removal.
                         </li>
                     </ul>
                     <p class="sub_title">Architecture:</p>
@@ -203,7 +203,7 @@ const viewFwFile = (): IvirtualNode => {
                             history stack.
                         </li>
                         <li>
-                            Controller cleanup: removeController disposes the active controller and all its child controllers to prevent memory leaks.
+                            Controller cleanup: deleteController disposes the active controller and all its child controllers to prevent memory leaks.
                         </li>
                         <li>
                             Navigation flow: populatePage performs soft navigation by matching routes, resetting framework state, pushing history,
@@ -244,14 +244,14 @@ const viewFwFile = (): IvirtualNode => {
                     <ul>
                         <li>Data writing: writeStorage serializes the value to JSON, encodes it as Base64, and stores it under a namespaced key.</li>
                         <li>Data reading: readStorage retrieves the stored value, decodes Base64, and parses JSON back to its original type.</li>
-                        <li>Data removal: removeStorage deletes the item from localStorage using the namespaced key.</li>
+                        <li>Data removal: deleteStorage deletes the item from localStorage using the namespaced key.</li>
                     </ul>
                     <p class="sub_title">Architecture:</p>
                     <ul>
                         <li>Base64 encoding: Values are encoded using window.btoa and decoded with window.atob for safe storage.</li>
                         <li>JSON serialization: Complex objects are converted to JSON before encoding, ensuring compatibility with localStorage.</li>
                         <li>Namespacing: Keys are prefixed with getAppLabel() to avoid collisions between different applications or modules.</li>
-                        <li>Persistent storage: Unlike cookies, data stored in localStorage persists until explicitly removed.</li>
+                        <li>Persistent storage: Unlike cookies, data stored in localStorage persists until explicitly deleted.</li>
                         <li>Type safety: Generic types (T) ensure that stored and retrieved data maintain type consistency.</li>
                     </ul>
                 </div>

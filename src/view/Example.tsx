@@ -124,10 +124,10 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                         <button
                             class="cls_button cls_button_primary"
                             onclick={() => {
-                                methodObject.onClickRemoveCookie();
+                                methodObject.onClickDeleteCookie();
                             }}
                         >
-                            Click for remove
+                            Click for delete
                         </button>
                         <p>
                             Cookie status: <span jsmvcfw-elementHookName="elementCookieRead"></span>
@@ -159,10 +159,10 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                         <button
                             class="cls_button cls_button_primary"
                             onclick={() => {
-                                methodObject.onClickRemoveStorage();
+                                methodObject.onClickDeleteStorage();
                             }}
                         >
-                            Click for remove
+                            Click for delete
                         </button>
                         <p>
                             Storage status: <span jsmvcfw-elementHookName="elementStorageRead"></span>

@@ -9,10 +9,10 @@ import {
     elementObserverOn,
     writeCookie,
     readCookie,
-    removeCookie,
+    deleteCookie,
     writeStorage,
     readStorage,
-    removeStorage
+    deleteStorage
 } from "@cimo/jsmvcfw/dist/src/Main.js";
 
 // Source
@@ -75,10 +75,10 @@ export default class Example implements Icontroller {
         }
     };
 
-    private onClickRemoveCookie = (): void => {
-        removeCookie("test");
+    private onClickDeleteCookie = (): void => {
+        deleteCookie("test");
 
-        this.hookObject.elementCookieRead.innerText = "Removed";
+        this.hookObject.elementCookieRead.innerText = "Deleted";
     };
 
     private onClickWriteStorage = (): void => {
@@ -97,10 +97,10 @@ export default class Example implements Icontroller {
         }
     };
 
-    private onClickRemoveStorage = (): void => {
-        removeStorage("test");
+    private onClickDeleteStorage = (): void => {
+        deleteStorage("test");
 
-        this.hookObject.elementStorageRead.innerText = "Removed";
+        this.hookObject.elementStorageRead.innerText = "Deleted";
     };
 
     constructor() {
@@ -126,10 +126,10 @@ export default class Example implements Icontroller {
             onClickVariableWatchTest: this.onClickVariableWatchTest,
             onClickWriteCookie: this.onClickWriteCookie,
             onClickReadCookie: this.onClickReadCookie,
-            onClickRemoveCookie: this.onClickRemoveCookie,
+            onClickDeleteCookie: this.onClickDeleteCookie,
             onClickWriteStorage: this.onClickWriteStorage,
             onClickReadStorage: this.onClickReadStorage,
-            onClickRemoveStorage: this.onClickRemoveStorage
+            onClickDeleteStorage: this.onClickDeleteStorage
         };
     }
 
