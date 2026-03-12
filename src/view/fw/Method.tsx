@@ -33,6 +33,16 @@ const viewFwMethod = (): IvirtualNode => {
                                 <td class="cell">Returns the current base URL.</td>
                             </tr>
                             <tr class="row">
+                                <td class="cell">{"setAppLabel(appLabelValue: string)"}</td>
+                                <td class="cell">{"void"}</td>
+                                <td class="cell">Sets the framework's system label.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">{"getAppLabel()"}</td>
+                                <td class="cell">{"string"}</td>
+                                <td class="cell">Returns the current framework system label.</td>
+                            </tr>
+                            <tr class="row">
                                 <td class="cell">{"getControllerList()"}</td>
                                 <td class="cell">{"Array<{ parent: Icontroller; childrenList: Icontroller[] }>"}</td>
                                 <td class="cell">Returns the hierarchical list of controllers (parent + children).</td>
@@ -55,9 +65,18 @@ const viewFwMethod = (): IvirtualNode => {
                                 <td class="cell">Creates a single reactive state for a controller, with state and setState.</td>
                             </tr>
                             <tr class="row">
-                                <td class="cell">{"variableBind<T extends Record<string, unknown>>(variableObject, controllerName)"}</td>
+                                <td class="cell">
+                                    {"variableBind<T extends Record<string, unknown>>(inputObject: TvariableBindInput<T>, controllerName: string)"}
+                                </td>
                                 <td class="cell">{"{ [K in keyof T]: IvariableBind<T[K]> }"}</td>
-                                <td class="cell">Creates reactive bindings for each key in variableObject, with getter/setter and listeners.</td>
+                                <td class="cell">
+                                    Creates reactive bindings for each key and supports variableLink(...) references to another controller.
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">{"variableLink<T>(controllerNameSource: string)"}</td>
+                                <td class="cell">{"IvariableLink<T>"}</td>
+                                <td class="cell">Creates a declarative link to a source controller variable with the same target key name.</td>
                             </tr>
                             <tr class="row">
                                 <td class="cell">{"elementObserver(element: HTMLElement, callback: IcallbackObserver)"}</td>
@@ -213,6 +232,16 @@ const viewFwMethod = (): IvirtualNode => {
                                 <td class="cell">Represents a reactive hook with state and setState method.</td>
                             </tr>
                             <tr class="row">
+                                <td class="cell">{"interface IvariableLink<T = unknown>"}</td>
+                                <td class="cell">{"IvariableLink<T>"}</td>
+                                <td class="cell">Describes a link marker object used by variableBind to resolve state from a source controller.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">{"interface IvariableLinkPending"}</td>
+                                <td class="cell">{"IvariableLinkPending"}</td>
+                                <td class="cell">Internal pending link entry used when source bindings are not available yet.</td>
+                            </tr>
+                            <tr class="row">
                                 <td class="cell">{"interface IvariableEffect"}</td>
                                 <td class="cell">{"IvariableEffect"}</td>
                                 <td class="cell">Defines a function that reacts to changes in a group of variables.</td>
@@ -246,6 +275,16 @@ const viewFwMethod = (): IvirtualNode => {
                                 <td class="cell">{"type TvirtualNodeChildren"}</td>
                                 <td class="cell">{"TvirtualNodeChildren"}</td>
                                 <td class="cell">Union type for valid virtual node children.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">{"type TvariableBindInput<T extends Record<string, unknown>>"}</td>
+                                <td class="cell">{"TvariableBindInput<T>"}</td>
+                                <td class="cell">Maps each key to either a direct value T[K] or a link object IvariableLink&lt;T[K]&gt;.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">{"type Temitter"}</td>
+                                <td class="cell">{"Temitter"}</td>
+                                <td class="cell">Defines the internal event map used by Emitter; currently includes the "variableChanged" event.</td>
                             </tr>
                         </tbody>
                     </table>

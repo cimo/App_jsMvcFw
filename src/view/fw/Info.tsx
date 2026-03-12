@@ -41,7 +41,7 @@ const viewFwInfo = (): IvirtualNode => {
             </ul>
             <h1>Why use it?</h1>
             <ul>
-                <li>In just 54 KB (uncompressed) and 10 KB (compressed), you get a complete and professional system.</li>
+                <li>In just 300 KB (uncompressed) and 48.5 KB (compressed), you get a complete and professional system.</li>
                 <li>Simplifies the development of complex interfaces.</li>
                 <li>Reduces repetitive code thanks to reusable components.</li>
                 <li>Improves project maintainability and readability.</li>
