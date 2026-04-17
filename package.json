@@ -22,7 +22,7 @@
         "execute": "nodemon --config nodemon.json"
     },
     "dependencies": {
-        "@cimo/jsmvcfw": "1.5.41"
+        "@cimo/jsmvcfw": "1.6.42"
     },
     "devDependencies": {
         "@types/node": "25.3.0",
