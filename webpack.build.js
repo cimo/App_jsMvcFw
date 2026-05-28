@@ -21,7 +21,11 @@ export default {
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx"],
         fallback: {
-            fs: false
+            fs: false,
+            crypto: false,
+            http: false,
+            https: false,
+            child_process: false
         }
     },
     module: {
