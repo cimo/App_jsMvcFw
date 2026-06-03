@@ -66,10 +66,10 @@ export default class Example implements Icontroller {
     };
 
     private onClickReadCookie = (): void => {
-        const result = readCookie<string>("test");
+        const value = readCookie<string>("test");
 
-        if (result) {
-            this.hookObject.elementCookieRead.innerText = result;
+        if (value) {
+            this.hookObject.elementCookieRead.innerText = value;
         } else {
             this.hookObject.elementCookieRead.innerText = "";
         }
@@ -88,10 +88,10 @@ export default class Example implements Icontroller {
     };
 
     private onClickReadStorage = (): void => {
-        const result = readStorage<string>("test");
+        const value = readStorage<string>("test");
 
-        if (result) {
-            this.hookObject.elementStorageRead.innerText = result;
+        if (value) {
+            this.hookObject.elementStorageRead.innerText = value;
         } else {
             this.hookObject.elementStorageRead.innerText = "";
         }
