@@ -12,7 +12,7 @@ import viewMvcController from "../view/mvc/Controller";
 const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelIndex.Imethod): IvirtualNode => {
     return (
         <div jsmvcfw-controllerName="Index">
-            <div class="page_container view_index">
+            <div class="page_wrapper view_index">
                 <div class="header">
                     <p>JsMvcFw wiki</p>
                 </div>

@@ -6,7 +6,7 @@ import * as modelExample from "../model/Example";
 const viewExample = (variableObject: modelExample.Ivariable, methodObject: modelExample.Imethod): IvirtualNode => {
     return (
         <div jsmvcfw-controllerName="Example">
-            <div class="page_container view_example">
+            <div class="page_wrapper view_example">
                 <div class="header">
                     <h1>Example</h1>
                     <p>
