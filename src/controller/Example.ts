@@ -136,7 +136,7 @@ export default class Example implements Icontroller {
     variableEffect(watch: IvariableEffect): void {
         watch([
             {
-                list: ["variableWatchTest"],
+                variableList: ["variableWatchTest"],
                 action: () => {
                     this.actionVariableWatchTest();
                 }
