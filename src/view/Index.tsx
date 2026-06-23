@@ -21,7 +21,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                         <li>
                             <p
                                 class="click"
-                                onClick{() => {
+                                onClick={() => {
                                     methodObject.onClickItem("");
                                 }}
                             >
@@ -31,7 +31,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                         <li>
                             <p
                                 class="click"
-                                onClick{() => {
+                                onClick={() => {
                                     methodObject.onClickLink("/example");
                                 }}
                             >
@@ -42,7 +42,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                         <li>
                             <p
                                 class="click"
-                                onClick{() => {
+                                onClick={() => {
                                     methodObject.onClickItem("fwInfo");
                                 }}
                             >
@@ -52,7 +52,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                         <li>
                             <p
                                 class="click"
-                                onClick{() => {
+                                onClick={() => {
                                     methodObject.onClickItem("fwFile");
                                 }}
                             >
@@ -62,7 +62,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                         <li>
                             <p
                                 class="click"
-                                onClick{() => {
+                                onClick={() => {
                                     methodObject.onClickItem("fwMethod");
                                 }}
                             >
@@ -73,7 +73,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                         <li>
                             <p
                                 class="click"
-                                onClick{() => {
+                                onClick={() => {
                                     methodObject.onClickItem("mvcModel");
                                 }}
                             >
@@ -83,7 +83,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                         <li>
                             <p
                                 class="click"
-                                onClick{() => {
+                                onClick={() => {
                                     methodObject.onClickItem("mvcView");
                                 }}
                             >
@@ -93,7 +93,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                         <li>
                             <p
                                 class="click"
-                                onClick{() => {
+                                onClick={() => {
                                     methodObject.onClickItem("mvcController");
                                 }}
                             >
