@@ -103,7 +103,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                     </ul>
                 </div>
                 <div class="right">
-                    {(() => {
+                    {() => {
                         if (variableObject.itemClickName.state === "fwInfo") {
                             return viewFwInfo();
                         } else if (variableObject.itemClickName.state === "fwFile") {
@@ -128,7 +128,7 @@ const viewIndex = (variableObject: modelIndex.Ivariable, methodObject: modelInde
                                 </div>
                             );
                         }
-                    })()}
+                    }}
                 </div>
                 <div class="footer"></div>
             </div>

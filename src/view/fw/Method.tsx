@@ -171,6 +171,36 @@ const viewFwMethod = (): IvirtualNode => {
                                     Updates an existing DOM element to match a new virtual node, modifying properties and children as needed.
                                 </td>
                             </tr>
+                            <tr class="row">
+                                <td class="cell">{"bindingTrack(key: string)"}</td>
+                                <td class="cell">{"void"}</td>
+                                <td class="cell">Subscribes the running reactive function to a variable key for dependency tracking.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">{"bindingNotify(key: string)"}</td>
+                                <td class="cell">{"boolean"}</td>
+                                <td class="cell">Re-runs the functions subscribed to a changed variable and returns whether any existed.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">{"bindingHasController(controllerName: string)"}</td>
+                                <td class="cell">{"boolean"}</td>
+                                <td class="cell">Returns true if a controller owns reactive bindings, skipping its full re-render.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">{"bindingSetControllerActive(controllerName: string | null)"}</td>
+                                <td class="cell">{"string | null"}</td>
+                                <td class="cell">Sets which controller owns the bindings being created and returns the previous one.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">{"bindingSetFlushCallback(callback: (dirtyControllerList: string[]) => void)"}</td>
+                                <td class="cell">{"void"}</td>
+                                <td class="cell">Registers the callback executed after a reactive update flush.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">{"bindingReset()"}</td>
+                                <td class="cell">{"void"}</td>
+                                <td class="cell">Clears all reactive bindings, subscriptions and dirty state.</td>
+                            </tr>
                         </tbody>
                     </table>
                 </li>

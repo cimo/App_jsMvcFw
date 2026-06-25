@@ -40,7 +40,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                             Click for increment
                         </button>
                         <p>
-                            Count: <span>{variableObject.count.state}</span>
+                            Count: <span>{() => variableObject.count.state}</span>
                         </p>
                     </div>
                     <div class="section">
@@ -81,7 +81,7 @@ const viewExample = (variableObject: modelExample.Ivariable, methodObject: model
                             Click for watch
                         </button>
                         <p>
-                            Text: <span>{variableObject.variableWatchTest.state}</span>
+                            Text: <span>{() => variableObject.variableWatchTest.state}</span>
                         </p>
                     </div>
                     <div class="section">
