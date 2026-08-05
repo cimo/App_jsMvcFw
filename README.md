@@ -18,6 +18,5 @@ npm run execute
 ## Reset
 1. Delete this from the root:
     - node_modules
-    - package-lock.json
 
 2. Follow the "Installation" instructions.
