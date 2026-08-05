@@ -11,12 +11,13 @@ npm install
 npm run execute
 ```
 
-2. Wrinte in the browser:
+2. Write in the browser:
 
     http://localhost:30000
 
 ## Reset
 1. Delete this from the root:
+    - dist
     - node_modules
 
 2. Follow the "Installation" instructions.
