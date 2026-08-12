@@ -19,5 +19,6 @@ npm run execute
 1. Delete this from the root:
     - dist
     - node_modules
+    - package-lock.json
 
 2. Follow the "Installation" instructions.
