@@ -5,7 +5,7 @@ Example app, with a wiki, to demonstrate how to use the framework.
 Is created with "Npm_jsMvcFw" to show everything in real use cases.
 
 ## Installation
-1. Write on terminal:
+1. Write on container terminal:
 ```
 npm install
 npm run execute
