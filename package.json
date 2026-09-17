@@ -21,7 +21,7 @@
         "execute": "nodemon --config nodemon.json"
     },
     "dependencies": {
-        "@cimo/jsmvcfw": "1.7.51"
+        "@cimo/jsmvcfw": "1.7.52"
     },
     "devDependencies": {
         "@types/node": "25.3.0",
@@ -33,7 +33,7 @@
         "typescript": "5.7.2",
         "nodemon": "3.1.14",
         "prettier": "3.4.2",
-        "eslint": "10.8.0",
+        "eslint": "10.10.0",
         "eslint-plugin-prettier": "5.5.6",
         "sass": "1.102.0",
         "webpack": "5.105.0",
@@ -44,7 +44,5 @@
         "compression-webpack-plugin": "12.0.0",
         "esbuild-loader": "4.5.0"
     },
-    "overrides": {
-        "fast-uri": "3.1.5"
-    }
+    "overrides": {}
 }
